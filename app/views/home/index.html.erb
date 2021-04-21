@@ -1,0 +1,711 @@
+<%= render "header" %>
+    <main class="homepage">
+        <% if student_signed_in? %>
+
+            <header class="header">
+                <div class="ds-grid__container">
+                    <div class="header-content">
+                        <h1 class="ds-typography__h1">
+                            Welcome Back<br />
+                            <% if current_student.first_name? %>
+                                <%= current_student.first_name + ' '+ current_student.last_name %>
+                                    <% else %>
+                                        <%= current_student.email %>
+                                            <% end %>
+                        </h1>
+                        <h4 class="ds-typography__h4">Now you can call our mentors 24x7 </h4>
+                        <a href="#choose-program" class="ds-button__secondary ds-button__large cta-button cta-button--header">Find the right program for you</a>
+                    </div>
+                </div>
+                <section class="main-features">
+                    <div class="ds-grid__container">
+                        <div class="features-wrapper">
+
+                            <div class="feature-item">
+                                <img src="https://images.careerfoundry.com/public/frontpages/homepage/header_learn-online.svg" loading="eager">
+                                <div>
+                                    <div class="ds-typography__lead--bold feature-text feature-title">Learn online</div>
+                                    <div class="ds-typography__lead feature-text">at a flexible pace</div>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <img src="https://images.careerfoundry.com/public/frontpages/homepage/header_expert-mentors.svg" loading="eager">
+                                <div>
+                                    <div class="ds-typography__lead--bold feature-text feature-title">Work with expert mentors</div>
+                                    <div class="ds-typography__lead feature-text">and build your portfolio</div>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <img src="https://images.careerfoundry.com/public/frontpages/homepage/header_job-guarantee.svg" loading="eager">
+                                <div>
+                                    <div class="ds-typography__lead--bold feature-text feature-title">Land a job in tech</div>
+                                    <div class="ds-typography__lead feature-text">backed by our Job Guarantee</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <picture>
+                    <source srcset="https://images.careerfoundry.com/public/frontpages/homepage/optimized/header_hp_jaye_2-min.webp" type="image/webp">
+                    <source srcset="https://images.careerfoundry.com/public/frontpages/homepage/optimized/header_hp_jaye_2-min.jpg" type="image/jpeg">
+                    <img class="header-image-mobile" src="https://images.careerfoundry.com/public/frontpages/homepage/optimized/header_hp_jaye_2-min.jpg" loading="eager">
+                    </source>
+                    </source>
+                </picture>
+
+                <section class="main-features-mobile">
+                    <div class="ds-grid__container">
+                        <div class="features-wrapper">
+
+                            <div class="feature-item">
+                                <img src="https://images.careerfoundry.com/public/frontpages/homepage/header_learn-online.svg" loading="eager">
+                                <div>
+                                    <div class="ds-typography__lead--bold feature-text feature-title">Learn online</div>
+                                    <div class="ds-typography__lead feature-text">at a flexible pace</div>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <img src="https://images.careerfoundry.com/public/frontpages/homepage/header_expert-mentors.svg" loading="eager">
+                                <div>
+                                    <div class="ds-typography__lead--bold feature-text feature-title">Work with expert mentors</div>
+                                    <div class="ds-typography__lead feature-text">and build your portfolio</div>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <img src="https://images.careerfoundry.com/public/frontpages/homepage/header_job-guarantee.svg" loading="eager">
+                                <div>
+                                    <div class="ds-typography__lead--bold feature-text feature-title">Land a job in tech</div>
+                                    <div class="ds-typography__lead feature-text">backed by our Job Guarantee</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </header>
+
+
+
+
+
+            <section class="companies" style="background-color: #fff">
+                <div class="ds-grid__container">
+                    <p class="ds-typography__body companies-title">Our graduates now have tech jobs all over the world</p>
+                    <div class="logos-wrapper">
+
+                        <img class="company-image" src="https://images.careerfoundry.com/public/frontpages/homepage/logo-amazon@3x.jpg" loading="lazy">
+
+                        <img class="company-image" src="https://images.careerfoundry.com/public/frontpages/homepage/logo-booking@3x.jpg" loading="lazy">
+
+                        <img class="company-image" src="https://images.careerfoundry.com/public/frontpages/homepage/logo-ebay@3x.jpg" loading="lazy">
+
+                        <img class="company-image" src="https://images.careerfoundry.com/public/frontpages/homepage/logo-facebook@3x.jpg" loading="lazy">
+
+                        <img class="company-image" src="https://images.careerfoundry.com/public/frontpages/homepage/logo-google@3x.jpg" loading="lazy">
+
+                        <img class="company-image" src="https://images.careerfoundry.com/public/frontpages/homepage/logo-netflix@3x.jpg" loading="lazy">
+
+                        <img class="company-image" src="https://images.careerfoundry.com/public/frontpages/homepage/logo-paypal@3x.jpg" loading="lazy">
+
+                        <img class="company-image" src="https://images.careerfoundry.com/public/frontpages/homepage/logo-visa@3x.jpg" loading="lazy">
+
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section id="covid-banner-container" class="covid-banner" style="background-color: transparent">
+                <div class="ds-grid__container covid-banner__container" style="background-color: #EFF1F3">
+                    <div class="covid-banner__text">
+                        <span class="ds-icon__info-line covid-banner__info"></span>
+                        <div class="ds-implicit">
+                            <p><strong>COVID-19:</strong> While our team of employees, mentors, tutors, and career specialists are working from home in an effort to curb the spread of COVID-19, CareerFoundry is operating as usual. All our programs are 100%
+                                online, and we’re offering more flexible study and payment options for the foreseeable future. If you’re interested in taking one of our programs, <a href="/en/connect/all-contact-advisor/">we’d love to speak to you about how we can support you during this time</a>.</p>
+                        </div>
+                        <span id="covid-banner-close-icon" class="ds-icon__close covid-banner__close"></span>
+                    </div>
+                </div>
+            </section>
+
+            <% else %>
+
+                <header class="header">
+                    <div class="ds-grid__container">
+                        <div class="header-content">
+                            <h1 class="ds-typography__h1">Build a career you love</h1>
+                            <h4 class="ds-typography__h4">Become a UX designer, UI designer, web developer, or data analyst from scratch</h4>
+                            <a href="#choose-program" class="ds-button__secondary ds-button__large cta-button cta-button--header">Find the right program for you</a>
+                        </div>
+                    </div>
+                    <section class="main-features">
+                        <div class="ds-grid__container">
+                            <div class="features-wrapper">
+
+                                <div class="feature-item">
+                                    <img src="https://images.careerfoundry.com/public/frontpages/homepage/header_learn-online.svg" loading="eager">
+                                    <div>
+                                        <div class="ds-typography__lead--bold feature-text feature-title">Learn online</div>
+                                        <div class="ds-typography__lead feature-text">at a flexible pace</div>
+                                    </div>
+                                </div>
+
+                                <div class="feature-item">
+                                    <img src="https://images.careerfoundry.com/public/frontpages/homepage/header_expert-mentors.svg" loading="eager">
+                                    <div>
+                                        <div class="ds-typography__lead--bold feature-text feature-title">Work with expert mentors</div>
+                                        <div class="ds-typography__lead feature-text">and build your portfolio</div>
+                                    </div>
+                                </div>
+
+                                <div class="feature-item">
+                                    <img src="https://images.careerfoundry.com/public/frontpages/homepage/header_job-guarantee.svg" loading="eager">
+                                    <div>
+                                        <div class="ds-typography__lead--bold feature-text feature-title">Land a job in tech</div>
+                                        <div class="ds-typography__lead feature-text">backed by our Job Guarantee</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <picture>
+                        <source srcset="https://images.careerfoundry.com/public/frontpages/homepage/optimized/header_hp_jaye_2-min.webp" type="image/webp">
+                        <source srcset="https://images.careerfoundry.com/public/frontpages/homepage/optimized/header_hp_jaye_2-min.jpg" type="image/jpeg">
+                        <img class="header-image-mobile" src="https://images.careerfoundry.com/public/frontpages/homepage/optimized/header_hp_jaye_2-min.jpg" loading="eager">
+                        </source>
+                        </source>
+                    </picture>
+
+                    <section class="main-features-mobile">
+                        <div class="ds-grid__container">
+                            <div class="features-wrapper">
+
+                                <div class="feature-item">
+                                    <img src="https://images.careerfoundry.com/public/frontpages/homepage/header_learn-online.svg" loading="eager">
+                                    <div>
+                                        <div class="ds-typography__lead--bold feature-text feature-title">Learn online</div>
+                                        <div class="ds-typography__lead feature-text">at a flexible pace</div>
+                                    </div>
+                                </div>
+
+                                <div class="feature-item">
+                                    <img src="https://images.careerfoundry.com/public/frontpages/homepage/header_expert-mentors.svg" loading="eager">
+                                    <div>
+                                        <div class="ds-typography__lead--bold feature-text feature-title">Work with expert mentors</div>
+                                        <div class="ds-typography__lead feature-text">and build your portfolio</div>
+                                    </div>
+                                </div>
+
+                                <div class="feature-item">
+                                    <img src="https://images.careerfoundry.com/public/frontpages/homepage/header_job-guarantee.svg" loading="eager">
+                                    <div>
+                                        <div class="ds-typography__lead--bold feature-text feature-title">Land a job in tech</div>
+                                        <div class="ds-typography__lead feature-text">backed by our Job Guarantee</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+                </header>
+
+
+
+
+
+                <section class="companies" style="background-color: #fff">
+                    <div class="ds-grid__container">
+                        <p class="ds-typography__body companies-title">Our graduates now have tech jobs all over the world</p>
+                        <div class="logos-wrapper">
+
+                            <img class="company-image" src="https://images.careerfoundry.com/public/frontpages/homepage/logo-amazon@3x.jpg" loading="lazy">
+
+                            <img class="company-image" src="https://images.careerfoundry.com/public/frontpages/homepage/logo-booking@3x.jpg" loading="lazy">
+
+                            <img class="company-image" src="https://images.careerfoundry.com/public/frontpages/homepage/logo-ebay@3x.jpg" loading="lazy">
+
+                            <img class="company-image" src="https://images.careerfoundry.com/public/frontpages/homepage/logo-facebook@3x.jpg" loading="lazy">
+
+                            <img class="company-image" src="https://images.careerfoundry.com/public/frontpages/homepage/logo-google@3x.jpg" loading="lazy">
+
+                            <img class="company-image" src="https://images.careerfoundry.com/public/frontpages/homepage/logo-netflix@3x.jpg" loading="lazy">
+
+                            <img class="company-image" src="https://images.careerfoundry.com/public/frontpages/homepage/logo-paypal@3x.jpg" loading="lazy">
+
+                            <img class="company-image" src="https://images.careerfoundry.com/public/frontpages/homepage/logo-visa@3x.jpg" loading="lazy">
+
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <section id="covid-banner-container" class="covid-banner" style="background-color: transparent">
+                    <div class="ds-grid__container covid-banner__container" style="background-color: #EFF1F3">
+                        <div class="covid-banner__text">
+                            <span class="ds-icon__info-line covid-banner__info"></span>
+                            <div class="ds-implicit">
+                                <p><strong>COVID-19:</strong> While our team of employees, mentors, tutors, and career specialists are working from home in an effort to curb the spread of COVID-19, CareerFoundry is operating as usual. All our programs are
+                                    100% online, and we’re offering more flexible study and payment options for the foreseeable future. If you’re interested in taking one of our programs, <a href="/en/connect/all-contact-advisor/">we’d love to speak to you about how we can support you during this time</a>.</p>
+                            </div>
+                            <span id="covid-banner-close-icon" class="ds-icon__close covid-banner__close"></span>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <section class="choose-program" id="choose-program">
+                    <div class="ds-grid__container">
+                        <div class="header-title">
+                            <h2 class="ds-typography__h2">Choose a program<br> and transform your career</h2>
+                            <div class="ds-typography__lead--bold">Our programs will teach you everything you need to get your first job in tech in as little as 5 months—even if you don’t have any previous experience.</div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="ds-grid__row">
+                                <div class="ds-grid__col-lg-9 ds-grid__col-md-11 ds-grid__col-sm-12 course-cards-wrapper">
+
+
+                                    <div class="course-card" style="background-color: var(--ds-color__lavender);">
+                                        <label class="course-label ds-typography__body--bold">job guarantee</label>
+                                        <h3 class="ds-typography__h3">UI Design</h3>
+                                        <div class="ds-typography__body--bold course-description">Make the web beautiful. Learn to design a complete application from scratch.</div>
+                                        <a href="/en/courses/become-a-ui-designer/" class="ds-button__tertiary cta-button ">View program <i class="ds-icon__arrow-thin-right"></i></a>
+                                    </div>
+
+
+                                    <div class="course-card" style="background-color: var(--ds-color__petrol);">
+                                        <label class="course-label ds-typography__body--bold">job guarantee</label>
+                                        <h3 class="ds-typography__h3">UX Design</h3>
+                                        <div class="ds-typography__body--bold course-description">Make the web usable for everyone. Become fluent in the UX design process.</div>
+                                        <a href="/en/courses/become-a-ux-designer/" class="ds-button__tertiary cta-button ">View program <i class="ds-icon__arrow-thin-right"></i></a>
+                                    </div>
+
+
+                                    <div class="course-card" style="background-color: var(--ds-color__teal);">
+                                        <label class="course-label ds-typography__body--bold">job guarantee</label>
+                                        <h3 class="ds-typography__h3">Web Development</h3>
+                                        <div class="ds-typography__body--bold course-description">Make the web. Learn to create with code.</div>
+                                        <a href="/en/courses/become-a-web-developer/" class="ds-button__tertiary cta-button ">View program <i class="ds-icon__arrow-thin-right"></i></a>
+                                    </div>
+
+
+                                    <div class="course-card" style="background-color: var(--ds-color__purple);">
+                                        <label class="course-label ds-typography__body--bold">job guarantee</label>
+                                        <h3 class="ds-typography__h3">Data Analytics</h3>
+                                        <div class="ds-typography__body--bold course-description">Make the data talk. Become a highly adept analyst with Excel, SQL and Python.</div>
+                                        <a href="https://careerfoundry.com/en/courses/become-a-data-analyst/" class="ds-button__tertiary cta-button ">View program <i class="ds-icon__arrow-thin-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="quotes-card">
+                                <h4 class="ds-typography__h4">
+                                    <img class="job-guarantee-icon" src="https://images.careerfoundry.com/public/frontpages/homepage/job-guarantee.svg" loading="lazy"> Job Guarantee
+                                </h4>
+                                <div class="ds-implicit">
+                                    <p>We understand that changing careers is a big step. That's why our programs come with a guarantee: you’ll get a job within 6 months of graduating, or we’ll refund the cost of your program. <br><a href="https://images.careerfoundry.com/public/course-overview/career_services_at_careerfoundry.pdf"
+                                            target="_blank">Learn more</a></p>
+                                </div>
+                                <picture>
+                                    <source srcset="https://images.careerfoundry.com/public/frontpages/homepage/optimized/job-guarantee-leaf.webp" type="image/webp">
+                                    <source srcset="https://images.careerfoundry.com/public/frontpages/homepage/optimized/job-guarantee-leaf.jpg" type="image/jpeg">
+                                    <img class="job-guarantee-leaf" src="https://images.careerfoundry.com/public/frontpages/homepage/optimized/job-guarantee-leaf.jpg" loading="eager">
+                                    </source>
+                                    </source>
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <section class="unsure-about-program ds-grid__container">
+                    <div class="centered-text">
+                        <h3 class="ds-typography__h2 title">Not sure which program<br> is right for you?</h3>
+                        <h4 class="ds-typography__h3">Read our in-depth guide</h4>
+                        <p class="ds-typography__lead description-text">Discover what a career in UX design, UI design, web development, or data analytics really entails—and which one is the best fit for you.</p>
+                        <a href="https://careerfoundry.com/en/blog/career-change/which-tech-career-path-is-right-for-me/" class="ds-button__tertiary cta-button ds-shadow__4">Read our in-depth guide <i class="ds-icon__arrow-thin-right"></i></a>
+                    </div>
+
+                    <div class="ds-grid__row">
+                        <div class="ds-grid__col-xs-12 ds-grid__col-lg-6">
+                            <div class="card short-course ds-shadow__16">
+                                <div class="short-course-blob">
+                                    <img src="https://coach-courses-us.s3.amazonaws.com/public/frontpages/homepage/cta-short-courses.png" loading="lazy">
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="ds-typography__h3">Try our free short courses</h3>
+                                    <div class="ds-implicit">
+                                        <p><strong>Get hands-on!</strong><br>Start sketching wireframes, designing user interfaces, or coding a website to discover which field suits you best.</p>
+                                    </div>
+                                    <a class="ds-button__tertiary cta-button cta-button--reduced-font ds-shadow__4" href="https://careerfoundry.com/en/short-courses/">Discover our short courses <i class="ds-icon__arrow-thin-right"></i></a>
+                                    <div class="mobile-short-course-blob">
+                                        <img src="https://coach-courses-us.s3.amazonaws.com/public/frontpages/homepage/free-short-courses_thumbnail-big.png" loading="lazy">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ds-grid__col-xs-12 ds-grid__col-lg-6">
+                            <div class="card career-advisor ds-shadow__16">
+                                <div class="career-advisor-blob">
+                                    <img src="https://images.careerfoundry.com/public/frontpages/homepage/career-advisor-blob-bg.png" loading="lazy">
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="ds-typography__h3">Get in touch with a program advisor today</h3>
+                                    <div class="ds-implicit">
+                                        <p>Discuss your background and interests with one of our expert program advisors—they’ll help you figure out if a CareerFoundry program is right for you.</p>
+                                    </div>
+                                    <a class="ds-button__tertiary cta-button cta-button--reduced-font ds-shadow__4" href="https://careerfoundry.com/en/connect/all-contact-advisor/">Contact your program advisor <i class="ds-icon__arrow-thin-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <section class="better-way-to-learn">
+                    <div class="ds-grid__container">
+                        <div class="centered-text">
+                            <h2 class="ds-typography__h2">A better way to learn</h2>
+                            <div class="ds-typography__lead--bold">Our programs are built around proven learning principles, first‑rate technology, and immersive exchanges with industry experts; everything you need to transform your career.</div>
+                        </div>
+                        <div class="sections">
+
+                            <div class="feature-section">
+                                <div class="feature-heading">
+                                    <h3 class="ds-typography__h3--light">Flexible online learning:</h3>
+                                    <h3 class="ds-typography__h3">Fit your studies into your life—we’ll help you stay on track</h3>
+                                </div>
+                                <div class="ds-grid__row features-grid">
+                                    <div class="ds-grid__col-xs-12 ds-grid__col-sm-12 ds-grid__col-md-6 image-wrapper">
+                                        <div class="section-background">
+                                            <img src="https://images.careerfoundry.com/public/frontpages/homepage/flexible-learning-blob@2x.png" loading="lazy">
+                                        </div>
+                                        <div class="section-image">
+                                            <img id="" src="https://images.careerfoundry.com/public/frontpages/homepage/flexible-learning.jpg" loading="lazy">
+
+                                        </div>
+                                    </div>
+                                    <div class="ds-grid__col-xs-12 ds-grid__col-sm-12 ds-grid__col-md-6 ds-implicit">
+                                        <div class="section-content">
+                                            <h4>Set your own study schedule</h4>
+                                            <p>Forget fixed lesson times and physical classrooms—you’re in charge of your time. We’ll hold you to a set end date and interim milestones; the rest is up to you.</p>
+                                            <h4>Stay accountable and on-track</h4>
+                                            <p>At CareerFoundry, you’re never alone. Your mentor, tutor, student advisor and career specialist are only ever a click, call or email away.</p>
+                                            <h4>No need to quit your job or relocate</h4>
+                                            <p>Our courses are 100% online. You don’t have to put your life on hold, so you can maintain your job and other commitments while learning.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="feature-section">
+                                <div class="feature-heading">
+                                    <h3 class="ds-typography__h3--light">A project-based curriculum:</h3>
+                                    <h3 class="ds-typography__h3">Finish with a polished, job-ready portfolio</h3>
+                                </div>
+                                <div class="ds-grid__row features-grid">
+                                    <div class="ds-grid__col-xs-12 ds-grid__col-sm-12 ds-grid__col-md-6 image-wrapper">
+                                        <div class="section-background">
+                                            <img src="https://images.careerfoundry.com/public/frontpages/homepage/curriculum-blob@2x.png" loading="lazy">
+                                        </div>
+                                        <div class="section-image">
+                                            <img id="" src="https://images.careerfoundry.com/public/frontpages/homepage/hp-dash-image.png" loading="lazy">
+
+                                        </div>
+                                    </div>
+                                    <div class="ds-grid__col-xs-12 ds-grid__col-sm-12 ds-grid__col-md-6 ds-implicit">
+                                        <div class="section-content">
+                                            <h4>A curriculum created in-house</h4>
+                                            <p>Authored and updated by industry-leading experts and structured by experienced instructional designers, our superior curriculum ensures you learn the skills that employers need.</p>
+                                            <h4>An intuitive learning platform</h4>
+                                            <p>Enjoy a seamless learning experience. Connect with your tutor, mentor and fellow students, submit your work and receive feedback, watch video tutorials, and plan out your study schedule with the help of our
+                                                time management features.</p>
+                                            <h4>Exclusive access to all our career‑change programs</h4>
+                                            <p>Request free, read-only access to our other career-change programs, enjoy free or discounted access to popular industry tools, and receive a certificate on completion of your program.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <section class="dual-mentorship">
+                            <div class="centered-text">
+                                <h3 class="ds-typography__h3--light">A unique dual mentorship model:</h3>
+                                <h3 class="ds-typography__h3">Learn from the best, every single day</h3>
+                                <div class="ds-typography__lead--bold">Our dual mentorship model pairs you with not one, but two dedicated experts; your mentor and tutor. And the support doesn’t end there. You’ll also be assigned a student advisor and a career specialist!</div>
+                                <div class="ds-typography__body company-title">Our mentors and tutors work at top companies all over the world</div>
+                                <div class="company-images">
+
+                                    <img src="https://images.careerfoundry.com/public/frontpages/homepage/logo-paypal@2x.png" loading="lazy">
+
+                                    <img src="https://images.careerfoundry.com/public/frontpages/homepage/logo-skype@3x.png" loading="lazy">
+
+                                    <img src="https://images.careerfoundry.com/public/frontpages/homepage/logo-yahoo@3x.png" loading="lazy">
+
+                                </div>
+                            </div>
+                            <div class="profiles-grid">
+
+                                <div class="profiles-grid-item">
+                                    <div class="profile-image">
+                                        <img src="https://images.careerfoundry.com/public/home_page/team_mentor.jpg" loading="lazy">
+                                    </div>
+                                    <div class="profile-content">
+                                        <h3 class="ds-typography__h3">Your mentor</h3>
+                                        <div class="ds-typography__body--bold">is a senior in the field with at least 5 years’ experience</div>
+                                        <p class="ds-typography__body">They’ll provide detailed feedback on all of your portfolio pieces.</p>
+                                    </div>
+                                </div>
+
+                                <div class="profiles-grid-item">
+                                    <div class="profile-image">
+                                        <img src="https://images.careerfoundry.com/public/home_page/team_tutor.jpg" loading="lazy">
+                                    </div>
+                                    <div class="profile-content">
+                                        <h3 class="ds-typography__h3">Your tutor</h3>
+                                        <div class="ds-typography__body--bold">is a course expert who works in your new field</div>
+                                        <p class="ds-typography__body">They'll answer your day-to-day questions within 24 hours.</p>
+                                    </div>
+                                </div>
+
+                                <div class="profiles-grid-item">
+                                    <div class="profile-image">
+                                        <img src="https://images.careerfoundry.com/public/home_page/team_career-specialist.jpg" loading="lazy">
+                                    </div>
+                                    <div class="profile-content">
+                                        <h3 class="ds-typography__h3">Your career specialist</h3>
+                                        <div class="ds-typography__body--bold">is a seasoned coach</div>
+                                        <p class="ds-typography__body">They'll help you with everything from identifying the jobs you want to refining your resume and practicing for interviews.</p>
+                                    </div>
+                                </div>
+
+                                <div class="profiles-grid-item">
+                                    <div class="profile-image">
+                                        <img src="https://images.careerfoundry.com/public/home_page/team_student-advisor.jpg" loading="lazy">
+                                    </div>
+                                    <div class="profile-content">
+                                        <h3 class="ds-typography__h3">Your student advisor</h3>
+                                        <div class="ds-typography__body--bold">is there to help and support you</div>
+                                        <p class="ds-typography__body">Your student advisor is committed to ensuring every aspect of your experience is successful; they'll be there for you every step of the way.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+
+
+
+                        <section class="student-community">
+                            <div class="centered-text">
+                                <h3 class="ds-typography__h3">Join a vibrant global student community</h3>
+                                <div class="ds-typography__lead--bold">Our student community is over 5,000 strong—and growing by the day. Connect online, exchange advice and feedback, and get involved in local meetups.</div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="https://images.careerfoundry.com/public/frontpages/homepage/student-community@3x-min.png" loading="lazy">
+                            </div>
+                        </section>
+
+                        <section class="job-guarantee ds-grid__container ds-shadow__16">
+                            <img class="top-left-image" src="https://images.careerfoundry.com/public/frontpages/homepage/job-guarantee_leave-2.png" loading="lazy">
+                            <div class="ds-grid__row">
+                                <div class="content ds-grid__col-xs-12 ds-grid__col-sm-12 ds-grid__col-md-6">
+                                    <h3 class="ds-typography__h2">A fair and accessible Job Guarantee</h3>
+                                    <p class="ds-typography__body">We understand that changing careers is a big step. And we’re confident you can make it. That’s why our programs come with a guarantee. Simply put, you’ll get a job within 6 months of graduating, or you’ll get your tuition
+                                        back.
+                                    </p>
+                                    <a target="_blank" href="https://images.careerfoundry.com/public/course-overview/career_services_at_careerfoundry.pdf" class="cta-button cta-button--reduced-font ds-button__secondary">How does the Job Guarantee work? <i class="ds-icon__arrow-thin-right"></i></a>
+                                </div>
+                                <div class="image ds-grid__col-xs-12 ds-grid__col-sm-12 ds-grid__col-md-6">
+                                    <img src="https://images.careerfoundry.com/public/frontpages/homepage/job-guarantee_desk-min.png" loading="lazy">
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </section>
+
+
+                <section class="graduates">
+                    <div class="ds-grid__container">
+                        <div class="centered-text">
+                            <h3 class="ds-typography__h2">Our graduates<br>forge careers they love</h3>
+                            <p class="ds-typography__lead--bold">Our programs are designed not only to teach new skills, but also to launch our graduates into creative, fulfilling, and well-paid careers.</p>
+                        </div>
+                        <div class="ds-grid__row content-area">
+                            <div class="ds-grid__col-xs-12 ds-grid__col-md-6 content">
+                                <img class="floating-image" src="https://images.careerfoundry.com/public/frontpages/homepage/grad-outcomes.jpg" loading="lazy">
+                            </div>
+                            <div class="ds-grid__col-xs-12 ds-grid__col-md-6 content">
+                                <div class="side-content">
+                                    <img src="https://coach-courses-us.s3.amazonaws.com/public/frontpages/homepage/stats-bloc-96.png" loading="lazy">
+                                    <p class="ds-typography__body--bold">Of eligible graduates get a job in tech within 180 days of completing their program.</p>
+                                    <p class="ds-typography__body">Find out more about our graduate outcomes, salary increases, and demographics</p>
+                                    <a href="https://careerfoundry.com/en/graduate-outcomes/" class="ds-button__primary graduates-cta" target="_blank">More graduate outcomes <i class="ds-icon__arrow-thin-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="reviews ds-grid__container">
+                    <div class="ds-grid__row">
+
+                        <div class="ds-grid__col-xs-12 ds-grid__col-md-6 ds-grid__col-lg-4">
+                            <div class="review">
+                                <div aria-hidden="true" class="ds-icon__quote"></div>
+                                <h5 class="ds-typography__h5">CareerFoundry was the perfect balance of hands-on experience, individual mentorship, and self-paced learning.</h5>
+                                <div class="author">
+                                    <img class="author-image ds-shadow__8" src="https://images.careerfoundry.com/public/testimonials/joel-bergstein.jpg" loading="lazy">
+                                    <div class="author-info">
+                                        <div>
+                                            <span class="ds-typography__body--bold">Joel</span>
+                                            <span class="ds-typography__body">(verified graduate)</span>
+                                        </div>
+                                        <div>
+
+
+                                            <span class="rating-stars">
+  
+    <span class="ds-icon__star-fill"></span>
+
+                                            <span class="ds-icon__star-fill"></span>
+
+                                            <span class="ds-icon__star-fill"></span>
+
+                                            <span class="ds-icon__star-fill"></span>
+
+                                            <span class="ds-icon__star-fill"></span>
+
+
+
+
+
+
+                                            </span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ds-grid__col-xs-12 ds-grid__col-md-6 ds-grid__col-lg-4">
+                            <div class="review">
+                                <div aria-hidden="true" class="ds-icon__quote"></div>
+                                <h5 class="ds-typography__h5">It was easy to manage my time, because the exercises came with time estimations and my mentor helped me to stay motivated and stick with my planning throughout the course.</h5>
+                                <div class="author">
+                                    <img class="author-image ds-shadow__8" src="https://images.careerfoundry.com/public/frontpages/courses/Quote-Maureen_Herben.png" loading="lazy">
+                                    <div class="author-info">
+                                        <div>
+                                            <span class="ds-typography__body--bold">Maureen</span>
+                                            <span class="ds-typography__body">(verified graduate)</span>
+                                        </div>
+                                        <div>
+
+
+                                            <span class="rating-stars">
+  
+    <span class="ds-icon__star-fill"></span>
+
+                                            <span class="ds-icon__star-fill"></span>
+
+                                            <span class="ds-icon__star-fill"></span>
+
+                                            <span class="ds-icon__star-fill"></span>
+
+                                            <span class="ds-icon__star-fill"></span>
+
+
+
+
+
+
+                                            </span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ds-grid__col-xs-12 ds-grid__col-md-6 ds-grid__col-lg-4">
+                            <div class="review">
+                                <div aria-hidden="true" class="ds-icon__quote"></div>
+                                <h5 class="ds-typography__h5">Without CareerFoundry I would not have my new job, and they helped me double my salary from my last job!</h5>
+                                <div class="author">
+                                    <img class="author-image ds-shadow__8" src="https://images.careerfoundry.com/public/frontpages/courses/Quote-Terri.png" loading="lazy">
+                                    <div class="author-info">
+                                        <div>
+                                            <span class="ds-typography__body--bold">Terri</span>
+                                            <span class="ds-typography__body">(verified graduate)</span>
+                                        </div>
+                                        <div>
+
+
+                                            <span class="rating-stars">
+  
+    <span class="ds-icon__star-fill"></span>
+
+                                            <span class="ds-icon__star-fill"></span>
+
+                                            <span class="ds-icon__star-fill"></span>
+
+                                            <span class="ds-icon__star-fill"></span>
+
+                                            <span class="ds-icon__star-fill"></span>
+
+
+
+
+
+
+                                            </span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+
+
+                <section class="ds-grid__container">
+                    <div class="ds-shadow__8 short-course">
+                        <div class="ds-grid__row">
+                            <div class="ds-grid__col-xs-12 ds-grid__col-md-4 ds-grid__col-md-offset-1 content">
+                                <h3 class="ds-typography__h3">Try our free short courses</h3>
+                                <div class="ds-typography__body--bold sub-title">Get hands-on!</div>
+                                <div class="ds-typography__body description-text">Start sketching wireframes, designing user interfaces, or coding a website, to discover which field suits you best.</div>
+                                <a href="https://careerfoundry.com/en/short-courses/" class="ds-button__tertiary cta-button cta-button--reduced-font">Discover our short courses <i class="ds-icon__arrow-thin-right"></i></a>
+                            </div>
+                            <div class="ds-grid__col-xs-12 ds-grid__col-md-6 ds-grid__col-md-offset-1 images">
+                                <img class="side-image" src="https://images.careerfoundry.com/public/frontpages/homepage/free-short-courses_thumbnail-big.png" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div id="video-container" class="video-container">
+
+                </div>
+
+                <% end %>
+    </main>

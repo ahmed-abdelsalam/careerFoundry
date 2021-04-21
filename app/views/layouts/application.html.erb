@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html class="spectrum spectrum--medium spectrum--light">
+
+<head>
+    <title>CareerfoundryCalender</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link rel="canonical" href="https://careerfoundry.com/">
+    <meta property="og:url" content="https://careerfoundry.com/">
+
+    <!-- preload fonts -->
+    <link rel="preload" href="https://styleguide.careerfoundry.com/8c93278f944edf696159b06de22870ca.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="https://styleguide.careerfoundry.com/62f95c2b90adee9f1b6f89c554b8aa55.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="https://styleguide.careerfoundry.com/90704895e1aef3dcb6d6d205df2f6a90.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="https://styleguide.careerfoundry.com/210d0af93aaff46ad2c8fb5b40e371e3.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="https://styleguide.careerfoundry.com/9dc13e47ed15a152e963775165a91885.woff" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://styleguide.careerfoundry.com/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+    <link rel="stylesheet" href="https://d33wubrfki0l68.cloudfront.net/css/d9d97c2b99c70f8c9c521ce1df74b7b3f16eb84d/en/v2/main-fb080339936568fb52538b37a1208d0666331c79d503e7dc53b370c996501bfb.css">
+    <link type='text/css' rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/d9d97c2b99c70f8c9c521ce1df74b7b3f16eb84d/en/v2/main-fb080339936568fb52538b37a1208d0666331c79d503e7dc53b370c996501bfb.css' />
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'index' %>
+</head>
+
+<body>
+    <%= render "home/header" %>
+    <%= yield %>
+    <%= render "home/footer" %>
+</body>
+
+</html>

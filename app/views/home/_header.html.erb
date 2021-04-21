@@ -1,0 +1,33 @@
+<div class="cf-nav__container">
+    <nav class="cf-nav cf-content">
+        <div class="ds-grid__container cf-nav__wrapper">
+            <a href="/" class="cf-nav__logo">
+                <img class="cf-hidden-xs cf-hidden-sm" alt="CareerFoundry" src="https://images.careerfoundry.com/public/logo/cf_logo_min_full.svg">
+                <img class="cf-visible-xs cf-visible-sm" alt="CareerFoundry" src="https://images.careerfoundry.com/public/logo/cf_logo_min_small.svg">
+            </a>
+            <div class="cf-nav__menu ">
+                <div class="cf-nav__menu--left">
+
+                    <a class="cf-nav__link" href="/app" target="_self" App</a>
+                        <a class="cf-nav__link" href="/app/agenda" target="_self">My Calls</a>
+                        <a class="cf-nav__link" href="/app/mentors" target="_self">Our Mentors</a>
+
+                </div>
+                <!-- /menu-left -->
+                <div class="cf-nav__menu--right">
+                    <% if student_signed_in? %>
+                    <%= button_to "logout", destroy_student_session_path, method: :delete , class: "cf-nav__link", style:"background: #223c50;border: none;color: white;font-family: TradeGothic,Helvetica,Arial,sans-serif;font-weight: 900;line-height: 1.15;" %>
+                    <% else %>
+                    <a class="cf-nav__link" href="/students/sign_in">Login</a>
+                    <% end %>
+                </div>
+            </div>
+            <div class="cf-nav__hamburger cf-nav__toggle_menu--hamburger" onclick="function toggleMenu(e){document.querySelector('nav .cf-nav__menu').classList.toggle('cf-nav__open')}">
+                <div class="cf-nav__hamburger__line"></div>
+                <div class="cf-nav__hamburger__line"></div>
+                <div class="cf-nav__hamburger__line"></div>
+            </div>
+        </div>
+        <!-- /container -->
+    </nav>
+</div>

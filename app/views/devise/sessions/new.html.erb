@@ -1,0 +1,61 @@
+<div class="container-fluid content_wrapper sessions-new">
+    <% if alert %>
+    <div class="toast fade show align-items-center position-fixed top-3 end-0 m-3 bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                <%= alert %>
+            </div>
+            <button type="button" class="btn-close me-2 m-auto" data-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+    <% end %>
+    <% if notice %>
+    <div class="toast-container position-fixed top-3 end-0 p-3" id="toastPlacement">
+        <div class="toast">
+            <div class="toast-header">
+                <img src="..." class="rounded me-2" alt="...">
+                <strong class="me-auto">Bootstrap</strong>
+                <small>11 mins ago</small>
+            </div>
+            <div class="toast-body">
+                <%= notice %>
+            </div>
+        </div>
+    </div>
+    <% end %>
+    <div class="row" id="global_banners"></div>
+    <div class="row" id="page_content">
+        <div class="new__session cf-content">
+            <header>
+                <img alt="Olivia, CareerFoundry Community Hero" class="img-circle" src="https://d3uj8v78jhp13l.cloudfront.net/public/framework/ask_olivia.jpg" width="80" height="80" data-pagespeed-url-hash="1311710690">
+                <div>
+                    <h1>Welcome</h1>
+                    <p>Nice to see you again!</p>
+                </div>
+            </header>
+
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: "new_student", acceptCharset: "UTF-8") do |f| %>
+            <div class="cf-form__group--floating cf-form__group--frozen">
+                <%= f.email_field :email, required: true, autofocus: true, autocomplete: "email",  type: "email", class: "cf-form__input" %>
+                <label class="cf-form__label--floating" for="student_email address">Email address</label>
+                <div class="cf-form__validation"></div>
+            </div>
+            <div class="cf-form__group--floating cf-form__group--frozen">
+                <%= f.password_field :password, required: true, type: "password", autocomplete: "current-password", class: "cf-form__input" %>
+                <label class="cf-form__label--floating" for="student_password">Password</label>
+                <div class="cf-form__validation"></div>
+                <div class="error__container">
+                    <p class="cf-small"></p>
+                </div>
+            </div>
+            <div class="cf-form__checkbox--open cf-form__group--frozen remember-me-checkbox">
+                <%= f.check_box :remember_me, type:"hidden", value:"1", checked:"checked" %>
+                <%= f.label :remember_me %>
+                <!-- <a class="cf-small" href="/students/password/new?locale=en">Forgot your password?</a> -->
+            </div>
+            <%= f.submit "Log in", class: "cf-form__submit button--primary-petrol form-submit--js", style: "width: 100%" %>
+            <%= render "devise/shared/links" %>
+            <% end %>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<% if alert %>
+<div id="alert" class="toast fade show align-items-center position-fixed top-3 end-0 m-3 bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="true">
+    <div class="d-flex">
+        <div class="toast-body">
+            <%= alert %>
+        </div>
+        <button type="button" class="btn-close me-2 m-auto" data-dismiss="toast" aria-label="Close"></button>
+    </div>
+</div>
+<% end %>
+<% if notice %>
+<div id="notice" class="toast-container position-fixed top-3 end-0 p-3" id="toastPlacement">
+    <div class="toast">
+        <div class="toast-header">
+            <img src="..." class="rounded me-2" alt="...">
+            <strong class="me-auto">Bootstrap</strong>
+            <small>11 mins ago</small>
+        </div>
+        <div class="toast-body">
+            <%= notice %>
+        </div>
+    </div>
+</div>
+<% end %>
+
+<div id="main" class="container" style="margin-top:100px;margin-bottom: 200px;">
+</div>

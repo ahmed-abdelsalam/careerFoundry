@@ -1,0 +1,37 @@
+.profile {
+    display: grid;
+}
+
+.profiles-grid-item {
+    grid-template-columns: auto auto;
+}
+
+.profile-content {
+    padding: 20px;
+}
+
+.mentor-card {
+    border: 1px solid #0000003b;
+    box-shadow: -4px 3px 40px 3px #0000002e;
+    border-radius: 20px;
+    padding-left: 0px !important;
+}
+
+.call-now {
+    font-size: 30px;
+    color: #223c50 !important;
+    float: right;
+    margin: 20px;
+}
+
+.call-now:hover {
+    color: #2b6a9ac7 !important;
+}
+
+.hero {
+    border-top-left-radius: 20px !important;
+    border-bottom-left-radius: 20px !important;
+    min-height: 300px;
+    height: 100%;
+    padding: 0px
+}

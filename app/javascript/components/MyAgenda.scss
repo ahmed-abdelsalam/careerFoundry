@@ -1,0 +1,32 @@
+.call-card {
+    border: 1px solid #00000029;
+    box-shadow: -4px 5px 20px 0px #0000000d;
+    border-radius: 20px;
+    position: relative;
+    .title {
+        font-family: "DINPro-Cond-Light";
+        font-size: "50px";
+        margin: "auto",
+    }
+    .sub-title {
+        font-size: 14px;
+        font-weight: 800;
+    }
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        transition: all 0.3s;
+    }
+    .close:hover {
+        color: #dc3545 !important;
+        transform: rotate(180deg);
+    }
+    .avatar {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 25px;
+        border-radius: 50%;
+    }
+}

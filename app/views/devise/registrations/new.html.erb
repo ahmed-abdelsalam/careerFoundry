@@ -1,0 +1,75 @@
+<div class="container-fluid content_wrapper sessions-new">
+    <% if alert %>
+    <div class="toast fade show align-items-center position-fixed top-3 end-0 m-3 bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                <%= alert %>
+            </div>
+            <button type="button" class="btn-close me-2 m-auto" data-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+    <% end %>
+    <% if notice %>
+    <div class="toast-container position-fixed top-3 end-0 p-3" id="toastPlacement">
+        <div class="toast">
+            <div class="toast-header">
+                <img src="..." class="rounded me-2" alt="...">
+                <strong class="me-auto">Bootstrap</strong>
+                <small>11 mins ago</small>
+            </div>
+            <div class="toast-body">
+                <%= notice %>
+            </div>
+        </div>
+    </div>
+    <% end %>
+    <div class="row" id="global_banners"></div>
+    <div class="row" id="page_content">
+        <div class="new__session cf-content">
+            <header>
+                <img alt="Olivia, CareerFoundry Community Hero" class="img-circle" src="https://d3uj8v78jhp13l.cloudfront.net/public/framework/ask_olivia.jpg" width="80" height="80" data-pagespeed-url-hash="1311710690">
+                <div>
+                    <h1>Hey!</h1>
+                    <p>Is it your first time here?</p>
+                </div>
+            </header>
+
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name) , class: "new_student", acceptCharset: "UTF-8") do |f| %>
+            <%= render "devise/shared/error_messages", resource: resource %>
+
+
+
+
+            <div class="cf-form__group--floating cf-form__group--frozen">
+                <%= f.text_field  :first_name, autofocus: true, autocomplete: "first_name", class: "cf-form__input" %>
+                <%= f.label :first_name, class: "cf-form__label--floating" %>
+            </div>
+            <div class="cf-form__group--floating cf-form__group--frozen">
+                <%= f.text_field  :last_name, autofocus: true, autocomplete: "last_name", class: "cf-form__input" %>
+                <%= f.label :last_name, class: "cf-form__label--floating" %>
+            </div>
+            <div class="cf-form__group--floating cf-form__group--frozen">
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "cf-form__input" %>
+                <%= f.label :email, class: "cf-form__label--floating" %>
+            </div>
+
+            <div class="cf-form__group--floating cf-form__group--frozen">
+                <% if @minimum_password_length %>
+                <em>(<%= @minimum_password_length %> characters minimum)</em>
+                <% end %>
+                <%= f.password_field :password, autocomplete: "new-password", class: "cf-form__input" %>
+                <%= f.label :password, class: "cf-form__label--floating" %>
+            </div>
+
+            <div class="cf-form__group--floating cf-form__group--frozen">
+                <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "cf-form__input" %>
+                <%= f.label :password_confirmation, class: "cf-form__label--floating" %>
+            </div>
+
+
+            <%= f.submit "Log in", class: "cf-form__submit button--primary-petrol form-submit--js", style: "width: 100%" %>
+            <%= render "devise/shared/links" %>
+            <% end %>
+        </div>
+    </div>
+</div>
