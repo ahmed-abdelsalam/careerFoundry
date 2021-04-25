@@ -15,9 +15,9 @@ module Api
 
         return head :not_found unless @record
 
-        calls = @record.call.order(start_time: :desc).all
+        calls = @record.call
         external_list = external_mentor_calls(params[:mentor_id])
-        render json: [calls, external_list].reduce([], :concat)
+        render json: [calls.order(start_time: 'desc'), external_list].reduce([], :concat)
       end
 
       def show
@@ -27,8 +27,8 @@ module Api
                         status: :not_found
         end
 
-        calls = @record.call.order(start_time: :desc).find(params[:id])
-        render json: calls
+        calls = @record.call.find(params[:id])
+        render json: calls.order(start_time: 'desc')
       end
 
       def destroy

@@ -1,9 +1,8 @@
 class HomeController < ApplicationController
-  before_action :authenticate_student!, only: %i[app agenda]
-  #   def index; end
+  before_action :authenticate_student!, only: %i[agenda]
 
   def agenda
-    calls = Call.where({ student_id: current_student.id })
-    render json: calls
+    calls = Call.where(student_id: current_student.id)
+    render json: calls.order(start_time: 'desc')
   end
 end
