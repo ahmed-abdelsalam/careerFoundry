@@ -16,7 +16,7 @@
                 <!-- /menu-left -->
                 <div class="cf-nav__menu--right">
                     <% if student_signed_in? %>
-                    <%= button_to "logout", destroy_student_session_path, method: :delete , class: "cf-nav__link", style:"background: #223c50;border: none;color: white;font-family: TradeGothic,Helvetica,Arial,sans-serif;font-weight: 900;line-height: 1.15;" %>
+                    <%= button_to "logout", destroy_student_session_path, method: :delete, class: "cf-nav__link", style: "background: #223c50;border: none;color: white;font-family: TradeGothic,Helvetica,Arial,sans-serif;font-weight: 900;line-height: 1.15;" %>
                     <% else %>
                     <a class="cf-nav__link" href="/students/sign_in">Login</a>
                     <% end %>

@@ -36,7 +36,7 @@
 
             <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: "new_student", acceptCharset: "UTF-8") do |f| %>
             <div class="cf-form__group--floating cf-form__group--frozen">
-                <%= f.email_field :email, required: true, autofocus: true, autocomplete: "email",  type: "email", class: "cf-form__input" %>
+                <%= f.email_field :email, required: true, autofocus: true, autocomplete: "email", type: "email", class: "cf-form__input" %>
                 <label class="cf-form__label--floating" for="student_email address">Email address</label>
                 <div class="cf-form__validation"></div>
             </div>
@@ -49,7 +49,7 @@
                 </div>
             </div>
             <div class="cf-form__checkbox--open cf-form__group--frozen remember-me-checkbox">
-                <%= f.check_box :remember_me, type:"hidden", value:"1", checked:"checked" %>
+                <%= f.check_box :remember_me, type: "hidden", value: "1", checked: "checked" %>
                 <%= f.label :remember_me %>
                 <!-- <a class="cf-small" href="/students/password/new?locale=en">Forgot your password?</a> -->
             </div>

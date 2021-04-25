@@ -1,4 +1,5 @@
 require 'application_system_test_case'
+
 class UserTest < ApplicationSystemTestCase
   test 'sign in' do
     user = Student.create(first_name: 'Mason', last_name: 'Price', email: 'mason.price@example.com',

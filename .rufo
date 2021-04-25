@@ -1,0 +1,3 @@
+align_case_when             true
+align_chained_calls         true
+quote_style                 :single

@@ -8,7 +8,7 @@
                         <h1 class="ds-typography__h1">
                             Welcome Back<br />
                             <% if current_student.first_name? %>
-                                <%= current_student.first_name + ' '+ current_student.last_name %>
+                                <%= current_student.first_name + " " + current_student.last_name %>
                                     <% else %>
                                         <%= current_student.email %>
                                             <% end %>

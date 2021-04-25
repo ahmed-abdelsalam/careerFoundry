@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get '/app', to: 'home#app'
   get '/app/*page', to: 'home#app', via: :all
-  
+
   get '/api/v1/agendas', to: 'home#agenda'
 
   namespace :api do

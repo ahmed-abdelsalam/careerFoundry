@@ -8,10 +8,10 @@ module Api
       def index
         # index /api/v1/mentors/1/agendas
         @record = if request.path.include?('students')
-                    Student.find(params[:student_id])
-                  else
-                    Mentor.find(params[:mentor_id])
-                  end
+            Student.find(params[:student_id])
+          else
+            Mentor.find(params[:mentor_id])
+          end
 
         return head :not_found unless @record
 
@@ -46,7 +46,7 @@ module Api
 
       # create /mentors/1
       def create
-        body =  JSON.parse(request.body.read)
+        body = JSON.parse(request.body.read)
         @mentor = Mentor.find(params[:mentor_id])
         if @mentor && body['start_time']
           start_time = DateTime.parse(body['start_time'])
