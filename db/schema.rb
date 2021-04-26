@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_25_130059) do
+ActiveRecord::Schema.define(version: 2021_04_26_145538) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
@@ -18,12 +18,13 @@ ActiveRecord::Schema.define(version: 2021_04_25_130059) do
   create_table 'calls', force: :cascade do |t|
     t.bigint 'student_id'
     t.bigint 'mentor_id'
-    t.datetime 'start_time'
+    t.datetime 'start_time', null: false
     t.integer 'duration', default: 60
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false
     t.string 'reason'
     t.index ['mentor_id'], name: 'index_calls_on_mentor_id'
+    t.index ['start_time', 'mentor_id'], name: 'index_calls_on_start_time_and_mentor_id', unique: true
     t.index ['student_id'], name: 'index_calls_on_student_id'
   end
 

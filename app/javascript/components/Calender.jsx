@@ -86,7 +86,7 @@ const CallCalender = () => {
     if (!reason || !start_time) return false;
     axios
       .post(`/api/v1/mentors/${state.currentMentor?.id}/agendas`, {
-        start_time: start_time.toISOString(),
+        start_time: start_time.toUTCString(),
         reason: reason,
         duration: 60,
       })
@@ -99,6 +99,9 @@ const CallCalender = () => {
         setAgendas(newAgendas)
         ref.current.close();
         confirm.current.open();
+      }).catch(e=>{
+        console.error(e);
+        alert("Something wen't wrong please try again!");
       });
   };
 
