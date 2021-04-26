@@ -8,10 +8,10 @@ module Api
       def index
         # index /api/v1/mentors/1/agendas
         @record = if request.path.include?('students')
-            Student.find(params[:student_id])
-          else
-            Mentor.find(params[:mentor_id])
-          end
+                    Student.find(params[:student_id])
+                  else
+                    Mentor.find(params[:mentor_id])
+                  end
 
         return head :not_found unless @record
 
@@ -54,13 +54,14 @@ module Api
             return render json: { message: 'start_time field should be in the future' },
                           status: :bad_request
           end
+          # head :not_acceptable unless check_available_time(start_time, params[:mentor_id])
           new_call = @mentor.call.create(start_time: start_time, reason: body['reason'], student_id: current_student.id,
                                          duration: 60)
           return render json: new_call, status: :created
         end
         head :bad_request
       rescue StandardError
-        head internal_server_error
+        head :internal_server_error
       end
 
       private
@@ -76,6 +77,22 @@ module Api
         end
       rescue StandardError
         []
+      end
+
+      def check_available_time(start_time, id)
+        data = external_mentor_calls(id)
+        selection = DateTime.parse(start_time)
+        data.each do |r|
+          ext_reservation = DateTime.parse(r['start_time'])
+          unless (ext_reservation.year == selection.year) &&
+                 (ext_reservation.month == selection.month) &&
+                 (ext_reservation.day == selection.day) &&
+                 (ext_reservation.hour == selection.hour)
+            return false
+          end
+        end
+      rescue e
+        true
       end
     end
   end

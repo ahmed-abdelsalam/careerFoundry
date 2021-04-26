@@ -70,7 +70,6 @@ const CallCalender = () => {
     let newHours = Array(24).fill(false);
     let timestamp = toTimestamp(selectedDate);
     let currentDay = agendas[timestamp];
-    debugger
       for (let h in currentDay) {
         newHours[h] = agendas[timestamp][h];
       }
@@ -111,7 +110,8 @@ const CallCalender = () => {
             className="d-inline-block"
             tabIndex="0"
             data-toggle="tooltip"
-            title="Disabled tooltip"
+            data-placement="top"
+            title={r ? 'This Hour is already reserved please select another time':''}
           >
             <button
               disabled={r}
