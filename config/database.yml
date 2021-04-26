@@ -85,5 +85,4 @@ test:
 production:
   <<: *default
   database: careerfoundry_calender_production
-  username: careerfoundry_calender
-  password: <%= ENV['CAREERFOUNDRY_CALENDER_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
