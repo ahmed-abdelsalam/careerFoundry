@@ -29,7 +29,7 @@ body {
     .cf-nav__menu {
         position: absolute;
         background-color: #fff;
-        box-shadow: 8px 8px 20px 0 rgb(51 51 51 / 10%);
+        box-shadow: 8px 8px 20px 0 #3333331a;
         z-index: 1;
         max-height: 0;
         pointer-events: none;
