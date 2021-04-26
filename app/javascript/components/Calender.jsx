@@ -108,7 +108,7 @@ const CallCalender = () => {
   const renderHours = () => {
     if (selectedDate)
       return hours.map((r, ix) => (
-        <div key={ix}>
+        <div className="p-2" key={ix}>
           <span
             className="d-inline-block"
             tabIndex="0"
@@ -162,8 +162,8 @@ const CallCalender = () => {
         <h1 className="card-title mb-5 mt-3 mx-auto">Select a Date & Time</h1>
       </div>
       <div className="row">
-        <div id="mentor" className="mx-3 col-lg-4 col-md-5 col-sm-12">
-          <div className="mentor-container" bis_skin_checked="1">
+        <div id="mentor" className="col-lg-4 col-md-12 px-5">
+          <div className="mentor-container px-3" bis_skin_checked="1">
             <img
               src={
                 state.currentMentor?.avatar_url ||
@@ -208,72 +208,70 @@ const CallCalender = () => {
             <FaGlobeAfrica /> {region}
           </div>
         </div>
-        <div id="mentor" className="col row">
-          <div className="col" style={{ margin: "auto" }}>
-            <Calender
-              className="col hours"
-              onChange={setSelectedDate}
-              selectedDate={selectedDate}
-              minDate={new Date()}
-              minDetail="decade"
-            />
-          </div>
-          <div className="col hours-container row">
-            <Popup ref={confirm}>
-              <div className="m-5">
-                <AiOutlineClose className="close" onClick={closeConfirm} />
-                <h1
-                  className="display-4 text-success"
-                  style={{ fontSize: "30px", textAlign: "center" }}
-                >
-                  Your Meeting set successfully!!
-                </h1>
-              </div>
-            </Popup>
-            <Popup ref={ref}>
-              <div className="m-5">
-                <AiOutlineClose className="close" onClick={closeTooltip} />
-                <h1 className="display-4 text-secondary">
-                  Schedule a meeting ?
-                </h1>
-                <h4 className="mt-4 text-secondary">
-                  {state.currentMentor?.name}
-                </h4>
-                <h5 className="mt-2 mb-2">
-                  {selectedDate?.toDateString() || ""} @
-                  {("0" + (selectedHour || NaN)).slice(-2)}
-                  :00
-                </h5>
-                <form onSubmit={createNewCall}>
-                  <div className="form-group mt-4">
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="meeting-reason"
-                      placeholder="Input a reason for the meeting"
-                      required
-                    />
-                  </div>
-                  <div className="form-group  mt-4 form-btn">
-                    <button
-                      type="submit"
-                      className="btn btn-outline-primary mx-1"
-                    >
-                      Confirm
-                    </button>
-                    <button
-                      type="button"
-                      // onClick={createNewCall}
-                      className="btn btn-outline-secondary  mx-1"
-                    >
-                      cancel
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </Popup>
-            {renderHours()}
-          </div>
+        <div className="col-lg-4 col-md-12" style={{ margin: "auto" }}>
+          <Calender
+            className="col hours my-5"
+            onChange={setSelectedDate}
+            selectedDate={selectedDate}
+            minDate={new Date()}
+            minDetail="decade"
+          />
+        </div>
+        <div className="col-lg-4 col-md-12 hours-container">
+          <Popup ref={confirm}>
+            <div className="m-5">
+              <AiOutlineClose className="close" onClick={closeConfirm} />
+              <h1
+                className="display-4 text-success"
+                style={{ fontSize: "30px", textAlign: "center" }}
+              >
+                Your Meeting set successfully!!
+              </h1>
+            </div>
+          </Popup>
+          <Popup ref={ref}>
+            <div className="m-5">
+              <AiOutlineClose className="close" onClick={closeTooltip} />
+              <h1 className="display-4 text-secondary">
+                Schedule a meeting ?
+              </h1>
+              <h4 className="mt-4 text-secondary">
+                {state.currentMentor?.name}
+              </h4>
+              <h5 className="mt-2 mb-2">
+                {selectedDate?.toDateString() || ""} @
+                {("0" + (selectedHour || NaN)).slice(-2)}
+                :00
+              </h5>
+              <form onSubmit={createNewCall}>
+                <div className="form-group mt-4">
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="meeting-reason"
+                    placeholder="Input a reason for the meeting"
+                    required
+                  />
+                </div>
+                <div className="form-group  mt-4 form-btn">
+                  <button
+                    type="submit"
+                    className="btn btn-outline-primary mx-1"
+                  >
+                    Confirm
+                  </button>
+                  <button
+                    type="button"
+                    // onClick={createNewCall}
+                    className="btn btn-outline-secondary  mx-1"
+                  >
+                    cancel
+                  </button>
+                </div>
+              </form>
+            </div>
+          </Popup>
+          {renderHours()}
         </div>
       </div>
     </div>

@@ -21,7 +21,7 @@ const Mentor = () => {
   return (
     <div className="jumbotron jumbotron-fluid">
       <div className="cf-content">
-        <h1 className="display-4 ds-grid__row ds-typography__h2">
+        <h1 className="display-4 ds-grid__row ds-typography__h2 mentor-title">
           Call a mentor
         </h1>
         <h4 className="lead">
@@ -30,14 +30,17 @@ const Mentor = () => {
         <hr />
         <div className="profile profiles-grid-item row my-3">
           {mentors.map((r) => (
-            <div key={r.id} className="mentor-card profile profiles-grid-item my-4">
-                <img
-                  src={r.avatar_url}
-                  alt=""
-                  className="hero"
-                  loading="lazy"
-                />
-              <div className="profile-content">
+            <div key={r.id} className="mentor-card my-4 row  px-0">
+              <div className="col col-lg-3 col-md-5 pl-0"
+              style={{
+                background: `url(${r.avatar_url})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+                borderRadius: '20px',
+              }}>
+                </div>
+              <div className="col">
+                <div className="profile-content">
                 <h1>{r.name}</h1>
                 <h3>{r.course}</h3>
                 <p>
@@ -56,6 +59,7 @@ const Mentor = () => {
                   <FaPhoneAlt />
                   <FaLongArrowAltRight />
                 </a>
+              </div>
               </div>
             </div>
           ))}
