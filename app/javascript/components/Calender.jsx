@@ -262,7 +262,7 @@ const CallCalender = () => {
                   </button>
                   <button
                     type="button"
-                    // onClick={createNewCall}
+                    onClick={closeTooltip}
                     className="btn btn-outline-secondary  mx-1"
                   >
                     cancel
