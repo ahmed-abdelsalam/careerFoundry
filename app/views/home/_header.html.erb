@@ -7,11 +7,11 @@
             </a>
             <div class="cf-nav__menu ">
                 <div class="cf-nav__menu--left">
-
+                    <% if student_signed_in? %>
                     <a class="cf-nav__link" href="/app" target="_self" App</a>
                         <a class="cf-nav__link" href="/app/agenda" target="_self">My Calls</a>
                         <a class="cf-nav__link" href="/app/mentors" target="_self">Our Mentors</a>
-
+                        <% end %>
                 </div>
                 <!-- /menu-left -->
                 <div class="cf-nav__menu--right">
